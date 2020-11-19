@@ -1,0 +1,21 @@
+﻿using System;
+
+namespace CustomRandomList
+{
+    public class StartUp
+    {
+        static void Main(string[] args)
+        {
+
+            RandomList list = new RandomList();
+
+            list.Add("Petko");
+            list.Add("Ivan");
+            list.Add("Mitko");
+            list.Add("Mitko2");
+
+            Console.WriteLine(list.RandomString());
+            Console.WriteLine(list.Count);
+        }
+    }
+}
