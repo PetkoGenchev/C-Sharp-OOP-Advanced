@@ -5,9 +5,19 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance-Lab-01", "Inheritance-Lab-01\Inheritance-Lab-01.csproj", "{10FB1573-9C0D-45D0-BD72-A47B073FBCD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-Lab-02", "Inheritance-Lab-02\Inheritance-Lab-02.csproj", "{A325B6C4-C7A1-4D67-9DE3-1AD156B87857}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance-Lab-02", "Inheritance-Lab-02\Inheritance-Lab-02.csproj", "{A325B6C4-C7A1-4D67-9DE3-1AD156B87857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-Lab-03", "Inheritance-Lab-03\Inheritance-Lab-03.csproj", "{C7F6BECE-2E28-47A9-A559-D6FA9E3EC725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance-Lab-03", "Inheritance-Lab-03\Inheritance-Lab-03.csproj", "{C7F6BECE-2E28-47A9-A559-D6FA9E3EC725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-Work-01", "Inheritance-Work-01\Inheritance-Work-01.csproj", "{C5AC8461-ACF4-4E19-B101-B72E122245A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-Work-02", "Inheritance-Work-02\Inheritance-Work-02.csproj", "{D632D247-A77C-4D57-804C-7AD97A728170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-Work-03", "Inheritance-Work-03\Inheritance-Work-03.csproj", "{865383BE-D47B-4B2A-BAA6-86E45A3ED1CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-Work-04", "Inheritance-Work-04\Inheritance-Work-04.csproj", "{09634CC8-A3CD-4512-9544-1065AA6EFDBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-Work-05", "Inheritance-Work-05\Inheritance-Work-05.csproj", "{9A7A797E-7625-4DF0-A04D-702BC237F4BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +37,26 @@ Global
 		{C7F6BECE-2E28-47A9-A559-D6FA9E3EC725}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7F6BECE-2E28-47A9-A559-D6FA9E3EC725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7F6BECE-2E28-47A9-A559-D6FA9E3EC725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AC8461-ACF4-4E19-B101-B72E122245A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AC8461-ACF4-4E19-B101-B72E122245A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AC8461-ACF4-4E19-B101-B72E122245A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AC8461-ACF4-4E19-B101-B72E122245A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D632D247-A77C-4D57-804C-7AD97A728170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D632D247-A77C-4D57-804C-7AD97A728170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D632D247-A77C-4D57-804C-7AD97A728170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D632D247-A77C-4D57-804C-7AD97A728170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865383BE-D47B-4B2A-BAA6-86E45A3ED1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865383BE-D47B-4B2A-BAA6-86E45A3ED1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865383BE-D47B-4B2A-BAA6-86E45A3ED1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865383BE-D47B-4B2A-BAA6-86E45A3ED1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09634CC8-A3CD-4512-9544-1065AA6EFDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09634CC8-A3CD-4512-9544-1065AA6EFDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09634CC8-A3CD-4512-9544-1065AA6EFDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09634CC8-A3CD-4512-9544-1065AA6EFDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A7A797E-7625-4DF0-A04D-702BC237F4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7A797E-7625-4DF0-A04D-702BC237F4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7A797E-7625-4DF0-A04D-702BC237F4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7A797E-7625-4DF0-A04D-702BC237F4BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
