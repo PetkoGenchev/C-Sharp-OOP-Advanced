@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Restaurant
+{
+    public class Fish : MainDish
+    {
+        private const double DefaultFishGrams = 22;
+
+        public Fish(string name, decimal price, double grams) 
+            : base(name, price, grams)
+        {
+        }
+
+        public override double Grams 
+        {
+            get => DefaultFishGrams;
+        }
+    }
+}
