@@ -6,7 +6,7 @@ namespace Restaurant
 {
     public class Food : Product
     {
-        public virtual double Grams { get; set; }
+        public double Grams { get; set; }
 
         public Food(string name, decimal price, double grams) 
             : base(name, price)

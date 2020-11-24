@@ -8,14 +8,9 @@ namespace Restaurant
     {
         private const double DefaultFishGrams = 22;
 
-        public Fish(string name, decimal price, double grams) 
-            : base(name, price, grams)
+        public Fish(string name, decimal price) 
+            : base(name, price, DefaultFishGrams)
         {
-        }
-
-        public override double Grams 
-        {
-            get => DefaultFishGrams;
         }
     }
 }
