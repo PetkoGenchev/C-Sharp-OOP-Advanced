@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Encapsulation
+namespace Encapsulation_Lab_02
 {
     class Program
     {
