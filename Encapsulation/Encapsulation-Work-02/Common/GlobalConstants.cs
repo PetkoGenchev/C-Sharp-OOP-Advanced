@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Encapsulation_Work_02
+﻿namespace Encapsulation_Work_02
 {
     public static class GlobalConstants
     {

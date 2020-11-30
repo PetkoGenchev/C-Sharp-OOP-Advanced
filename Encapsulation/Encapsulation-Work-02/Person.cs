@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Encapsulation_Work_02
 {
@@ -88,7 +87,12 @@ namespace Encapsulation_Work_02
 
 
 
+        public override string ToString()
+        {
+            string productOutput = this.Products.Count > 0 ? string.Join(", ", this.Products) : "Nothing bought";
 
+            return $"{this.Name} - {productOutput}";
+        }
 
 
 
