@@ -36,7 +36,7 @@ namespace Encapsulation_Work_02
             }
             private set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException(GlobalConstants.emptyNameException);
                 }

@@ -74,13 +74,13 @@ namespace Encapsulation_Work_02.Core
         private void PeopleInput()
         {
             string[] inputPeople = Console.ReadLine()
-                        .Split(";", StringSplitOptions.RemoveEmptyEntries)
+                        .Split(";",StringSplitOptions.RemoveEmptyEntries)
                         .ToArray();
 
 
             foreach (var itemPer in inputPeople)
             {
-                var personDetails = itemPer.Split('=').ToArray();
+                var personDetails = itemPer.Split('=',StringSplitOptions.RemoveEmptyEntries).ToArray();
 
                 string personName = personDetails[0];
                 int personMoney = int.Parse(personDetails[1]);
@@ -94,12 +94,12 @@ namespace Encapsulation_Work_02.Core
         private void ProductsInput()
         {
             var inputProducts = Console.ReadLine()
-                .Split(";", StringSplitOptions.RemoveEmptyEntries)
+                .Split(";",StringSplitOptions.RemoveEmptyEntries)
                 .ToArray();
 
             foreach (var itemProd in inputProducts)
             {
-                var productDetails = itemProd.Split("=").ToArray();
+                var productDetails = itemProd.Split("=",StringSplitOptions.RemoveEmptyEntries).ToArray();
 
                     Product product = new Product(productDetails[0], int.Parse(productDetails[1]));
                     products.Add(product);
