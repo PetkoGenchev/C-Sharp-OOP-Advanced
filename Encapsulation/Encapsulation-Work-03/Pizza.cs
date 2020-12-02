@@ -8,8 +8,8 @@ namespace Encapsulation_Work_03
 {
     public class Pizza
     {
-        public string Name { get; set; }
-        public Dough Dough { get; set; }
+        private string Name { get; set; }
+        private Dough Dough { get; set; }
         private List<Topping> toppings { get; set; }
 
         private int numberOfToppings;
@@ -28,58 +28,60 @@ namespace Encapsulation_Work_03
 
         public void Run()
         {
-            string[] nameEntry = Console.ReadLine().Split(" ").ToArray();
-            string pizzaName = nameEntry[1];
-
-            if (string.IsNullOrEmpty(pizzaName) || pizzaName.Length > 15)
+            try
             {
-                throw new ArgumentException(pizzaNameMsg);
-            }
+                string[] nameEntry = Console.ReadLine().Split(" ").ToArray();
+                this.Name = nameEntry[1];
 
-
-            string[] doughEntry = Console.ReadLine()
-                .Split(" ")
-                .ToArray();
-            string entryDoughFlour = char.ToUpper(doughEntry[1].First()) + doughEntry[1].Substring(1).ToLower();
-            string entryDoughBake = char.ToUpper(doughEntry[2].First()) + doughEntry[2].Substring(1).ToLower();
-            double entryDoughGrams = double.Parse(doughEntry[3]);
-
-            Dough dough = new Dough(entryDoughFlour, entryDoughBake, entryDoughGrams);
-            totalCalories += dough.CalculateDoughCallories();
-
-            while (true)
-            {
-                string topInput = Console.ReadLine();
-                numberOfToppings++;
-
-                if (numberOfToppings > 10)
+                if (string.IsNullOrEmpty(this.Name) || this.Name.Length > 15)
                 {
-                    throw new ArgumentException(pizzaToppingsMsg);
+                    throw new ArgumentException(pizzaNameMsg);
                 }
 
-                if (topInput == "END")
+
+                string[] doughEntry = Console.ReadLine()
+                    .Split(" ")
+                    .ToArray();
+                string entryDoughFlour = char.ToUpper(doughEntry[1].First()) + doughEntry[1].Substring(1).ToLower();
+                string entryDoughBake = char.ToUpper(doughEntry[2].First()) + doughEntry[2].Substring(1).ToLower();
+                double entryDoughGrams = double.Parse(doughEntry[3]);
+
+                Dough dough = new Dough(entryDoughFlour, entryDoughBake, entryDoughGrams);
+                totalCalories += dough.CalculateDoughCallories();
+
+                while (true)
                 {
-                    break;
+                    string topInput = Console.ReadLine();
+                    numberOfToppings++;
+
+                    if (numberOfToppings > 10)
+                    {
+                        throw new ArgumentException(pizzaToppingsMsg);
+                    }
+
+                    if (topInput == "END")
+                    {
+                        Console.WriteLine($"{this.Name} - {this.totalCalories:f2} Calories.");
+                        break;
+                    }
+
+                    string[] toppingEntry = topInput.Split(" ").ToArray();
+                    string entryToppingName = char.ToUpper(toppingEntry[1].First()) + toppingEntry[1].Substring(1).ToLower();
+                    double entryToppingWeight = double.Parse(toppingEntry[2]);
+
+
+                    Topping topping = new Topping(entryToppingName, entryToppingWeight);
+                    totalCalories += topping.CalculateToppingCalories();
+
                 }
 
-                string[] toppingEntry = topInput.Split(" ").ToArray();
-                string entryToppingName = char.ToUpper(toppingEntry[1].First()) + toppingEntry[1].Substring(1).ToLower();
-                double entryToppingWeight = double.Parse(toppingEntry[2]);
-
-
-                Topping topping = new Topping(entryToppingName, entryToppingWeight);
-                totalCalories += topping.CalculateToppingCalories();
 
             }
+            catch (ArgumentException ae)
+            {
 
+                Console.WriteLine(ae.Message); ;
+            }
         }
-
-        public override string ToString()
-        {
-            return $"{this.Name} - {this.totalCalories:f2} Calories.";
-        }
-
-
-
     }
 }
