@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Encapsulation_Work_04
+namespace InterfaceAndAbstraction_Lab_01
 {
     class Program
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Hello World!");
         }
     }
 }
