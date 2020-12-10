@@ -4,27 +4,12 @@ using System.Text;
 
 namespace Cars
 {
-    public class Seat : ICar
+    public class Seat : Car, ICar
     {
-        public string Model { get; set; }
-        public string Color { get; set; }
-
         public Seat(string model, string color)
+            : base(model, color)
         {
-            this.Model = model;
-            this.Color = color;
-        }
 
-
-        public string Start()
-        {
-            return $"{this.Color} Seat {this.Model}\r Engine start";
-
-        }
-
-        public string Stop()
-        {
-            return "Breaaak!";
         }
     }
 }
