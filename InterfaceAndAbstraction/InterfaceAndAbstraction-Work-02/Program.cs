@@ -1,32 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Telephony.GlobalMsg;
 
 namespace Telephony
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            List<PhoneNumbers> phonenumbers = new List<PhoneNumbers>();
-            List<WebSite> websites = new List<WebSite>();
-
             string[] phoneInput = Console.ReadLine().Split().ToArray();
-            string[] webInput = Console.ReadLine().Split().ToArray();
+            string[] siteInput = Console.ReadLine().Split().ToArray();
 
-            foreach (string item in phoneInput)
+            var stationary = new StationaryPhone();
+            var smart = new Smartphone();
+
+
+            for (int i = 0; i < phoneInput.Length; i++)
             {
-                var num = new PhoneNumbers(item);
-                phonenumbers.Add(num);
+                try
+                {
+
+                    if (phoneInput[i].Length == 7)
+                    {
+                        Console.WriteLine(stationary.CallOtherPhones(phoneInput[i]));
+                    }
+                    else if (phoneInput[i].Length == 10)
+                    {
+                        Console.WriteLine(smart.CallOtherPhones(phoneInput[i]));
+                    }
+                    else
+                    {
+                        throw new ArgumentException(InvalidMsg.InvalidNumberMsg);
+                    }
+
+
+
+                }
+                catch (ArgumentException ae)
+                {
+                    Console.WriteLine(ae.Message);
+                }
             }
 
-            foreach (var item in webInput)
+            foreach (var url in siteInput)
             {
-                var web = new WebSite(item);
-                websites.Add(web);
+                try
+                {
+                    Console.WriteLine(smart.BrowseW(url));
+                }
+                catch (ArgumentException ae)
+                {
+                    Console.WriteLine(ae.Message);
+                }
+
             }
-
-
         }
     }
 }
