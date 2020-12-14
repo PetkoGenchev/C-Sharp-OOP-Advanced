@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAndAbstraction-Wor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAndAbstraction-Work-02", "InterfaceAndAbstraction-Work-02\InterfaceAndAbstraction-Work-02.csproj", "{DF186B5B-5B63-4462-B158-06FBA8410FA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAndAbstraction-Work-03", "InterfaceAndAbstraction-Work-03\InterfaceAndAbstraction-Work-03.csproj", "{D87751FB-2D78-4E96-919B-3A9CC43C08E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAndAbstraction-Work-03", "InterfaceAndAbstraction-Work-03\InterfaceAndAbstraction-Work-03.csproj", "{D87751FB-2D78-4E96-919B-3A9CC43C08E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

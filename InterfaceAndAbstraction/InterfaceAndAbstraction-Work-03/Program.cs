@@ -8,54 +8,50 @@ namespace Border_Control
     {
         static void Main()
         {
-            List<IEntry> entries = new List<IEntry>();
+            List<IBuyer> buyers = new List<IBuyer>();
+
+            int inputCount = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < inputCount; i++)
+            {
+                var entry = Console.ReadLine().Split().ToList();
+
+                if (entry.Count == 4)
+                {
+                    Citizen citizen = new Citizen(entry[0], int.Parse(entry[1]), entry[2], entry[3]);
+                    buyers.Add(citizen);
+                }
+                else
+                {
+                    Rebel rebel = new Rebel(entry[0], int.Parse(entry[1]), entry[2]);
+                    buyers.Add(rebel);
+                }
+            }
 
             while (true)
             {
-                string input = Console.ReadLine();
+                string command = Console.ReadLine();
 
-                if (input == "End")
+                if (command == "End")
                 {
                     break;
                 }
-
-                var inputArray = input.Split().ToList();
-
-                string typeOfEntry = inputArray[0];
-
-                if (typeOfEntry == "Citizen")
+                else if (buyers.Any(x => x.Name == command))
                 {
-                    PeopleEntry people = new PeopleEntry(inputArray[1], int.Parse(inputArray[2]),
-                        inputArray[3], inputArray[4]);
-                    entries.Add(people);
-                }
+                    IBuyer buyer = buyers.FirstOrDefault(x => x.Name == command);
 
-
-
-
-
-
-            }
-
-            string endDigits = Console.ReadLine();
-
-            int counter = 0;
-            
-            foreach (IEntry item in entries)
-            {
-
-
-                if (item.EndsWithCheck(endDigits))
-                {
-                    counter++;
-                    Console.WriteLine(item.Birthday);
+                    buyer.BuyFood();
                 }
             }
 
-            if (counter == 0)
+            int totalFood = 0;
+
+            foreach (IBuyer buyer in buyers)
             {
-                Console.WriteLine("< empty output >");
+                totalFood += buyer.Food;
             }
+
+            Console.WriteLine(totalFood);
         }
     }
 }

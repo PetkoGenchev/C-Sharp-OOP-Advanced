@@ -6,16 +6,16 @@ namespace Border_Control
 {
     interface IEntry
     {
-        string Birthday { get; set; }
+        //string Birthday { get; set; }
 
-        public bool EndsWithCheck(string endDigits)
-        {
-            if (!this.Birthday.EndsWith(endDigits))
-            {
-                return false;
-            }
+        //public bool EndsWithCheck(string endDigits)
+        //{
+        //    if (!this.Birthday.EndsWith(endDigits))
+        //    {
+        //        return false;
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
     }
 }
