@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAndAbstraction-Wor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAndAbstraction-Work-03", "InterfaceAndAbstraction-Work-03\InterfaceAndAbstraction-Work-03.csproj", "{D87751FB-2D78-4E96-919B-3A9CC43C08E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceAndAbstraction-Work-04", "InterfaceAndAbstraction-Work-04\InterfaceAndAbstraction-Work-04.csproj", "{192ED106-1EA5-43C5-AEB9-AB7DD571C561}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D87751FB-2D78-4E96-919B-3A9CC43C08E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D87751FB-2D78-4E96-919B-3A9CC43C08E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D87751FB-2D78-4E96-919B-3A9CC43C08E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192ED106-1EA5-43C5-AEB9-AB7DD571C561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192ED106-1EA5-43C5-AEB9-AB7DD571C561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192ED106-1EA5-43C5-AEB9-AB7DD571C561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192ED106-1EA5-43C5-AEB9-AB7DD571C561}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
