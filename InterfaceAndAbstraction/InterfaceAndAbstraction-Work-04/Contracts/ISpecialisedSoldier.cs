@@ -6,5 +6,6 @@ namespace Military.Contracts
 {
     public interface ISpecialisedSoldier
     {
+        string Corps { get; }
     }
 }

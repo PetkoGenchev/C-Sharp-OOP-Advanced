@@ -6,9 +6,9 @@ namespace Military.Contracts
 {
     public interface ISoldier
     {
-        public string Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+         string Id { get;  }
+         string FirstName { get; }
+         string LastName { get;  }
 
     }
 }

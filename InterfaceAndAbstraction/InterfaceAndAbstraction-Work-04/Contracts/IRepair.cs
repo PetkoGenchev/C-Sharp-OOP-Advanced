@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Military.Contracts
 {
-    public interface ICommando 
+    public interface IRepair
     {
-        ICollection<IMission> Missions { get; }
+        string Name { get; }
+        int HoursWorked { get; }
     }
 }

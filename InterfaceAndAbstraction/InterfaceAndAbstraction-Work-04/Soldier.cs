@@ -5,7 +5,7 @@ using Military.Contracts;
 
 namespace Military
 {
-    public abstract class Soldier : ISoldier
+    public class Soldier : ISoldier
     {
         public string Id { get; set; }
         public string FirstName { get; set; }

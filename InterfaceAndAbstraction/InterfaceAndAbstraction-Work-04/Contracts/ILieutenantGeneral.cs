@@ -6,5 +6,6 @@ namespace Military.Contracts
 {
     public interface ILieutenantGeneral
     {
+        ICollection<IPrivate> Privates { get; }
     }
 }

@@ -6,6 +6,6 @@ namespace Military.Contracts
 {
     public interface IEngineer
     {
-
+        ICollection<IRepair> Repairs { get; }
     }
 }

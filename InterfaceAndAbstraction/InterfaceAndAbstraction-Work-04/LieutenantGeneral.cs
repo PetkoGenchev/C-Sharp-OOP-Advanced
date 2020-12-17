@@ -7,12 +7,14 @@ namespace Military
 {
     public class LieutenantGeneral : Private, ILieutenantGeneral
     {
-        List<Private> Privates;
+        ICollection<ILieutenantGeneral> Privates;
 
         public LieutenantGeneral(string id, string firstName, string lastName, decimal salary, List<Private> privates) 
             : base(id, firstName, lastName, salary)
         {
-            this.Privates = privates;
+            //this.Privates = privates;
         }
+
+        public ICollection<IPrivate> Privates => throw new NotImplementedException();
     }
 }
