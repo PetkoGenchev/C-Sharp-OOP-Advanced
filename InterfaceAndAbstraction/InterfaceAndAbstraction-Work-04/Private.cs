@@ -9,10 +9,16 @@ namespace Military
     {
         public decimal Salary { get; set; }
 
-        public Private(string id, string firstName, string lastName, decimal salary) 
+        public Private(int id, string firstName, string lastName, decimal salary) 
             : base(id, firstName, lastName)
         {
             this.Salary = salary;
+        }
+
+
+        public override string ToString()
+        {
+            return $"Name: {base.ToString()} Salary: {Math.Round(this.Salary,2):F2}";
         }
     }
 }

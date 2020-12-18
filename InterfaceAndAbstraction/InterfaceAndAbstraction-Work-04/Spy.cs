@@ -9,10 +9,18 @@ namespace Military
     {
         public int CodeNumber { get; set; }
 
-        public Spy(string id, string firstName, string lastName, int codenumber)
+        public Spy(int id, string firstName, string lastName, int codenumber)
             : base(id, firstName, lastName)
         {
             this.CodeNumber = codenumber;
+        }
+
+
+        public override string ToString()
+        {
+            return $"Name: {base.ToString()}" +
+                Environment.NewLine +
+                $"Code Number: {this.CodeNumber}";
         }
     }
 }

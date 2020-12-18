@@ -7,14 +7,24 @@ namespace Military
 {
     public class LieutenantGeneral : Private, ILieutenantGeneral
     {
-        ICollection<ILieutenantGeneral> Privates;
+        public ICollection<IPrivate> Privates { get; }
 
-        public LieutenantGeneral(string id, string firstName, string lastName, decimal salary, List<Private> privates) 
+        public LieutenantGeneral(int id, string firstName, string lastName, decimal salary, ICollection<IPrivate> privates) 
             : base(id, firstName, lastName, salary)
         {
-            //this.Privates = privates;
+            this.Privates = privates;
         }
 
-        public ICollection<IPrivate> Privates => throw new NotImplementedException();
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var @private in Privates)
+            {
+
+            }
+
+            return $"{base.ToString()}";
+        }
     }
 }

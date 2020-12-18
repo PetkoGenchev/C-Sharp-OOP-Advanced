@@ -2,27 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 using Military.Contracts;
+using Military.ENumerations;
 
 namespace Military
 {
     public class Commando : SpecialisedSoldier, ICommando
     {
-        List<Missions> Mission;
+        public ICollection<IMission> Missions { get; }
 
-        public Commando(string id, string firstName, string lastName, decimal salary, string corps, List<Missions> mission) 
+        public Commando(int id, string firstName, string lastName, decimal salary, SoldierCorpsEnumerator corps, ICollection<IMission> mission) 
             : base(id, firstName, lastName, salary, corps)
         {
-            this.Mission = mission;
+            this.Missions = mission;
         }
-
-        //public override string ToString()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    sb.AppendLine("Name: ", this.FirstName, " ", this.LastName, " ", "Id: ", this.Id, " ", "Salary: ", this.Salary);
-        //    sb.AppendLine("Corps: ", this.Corps);
-        //    sb.AppendLine("Missions:");
-
-        //    return sb.ToString();
-        //}
     }
 }

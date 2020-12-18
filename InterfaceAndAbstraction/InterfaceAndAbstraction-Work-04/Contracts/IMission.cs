@@ -9,7 +9,7 @@ namespace Military.Contracts
     {
         string CodeName { get; }
 
-        MissionEnum missionEnum { get; }
+        MissionEnum MissionEnum { get; }
 
         void CompleteMission(string name);
     }

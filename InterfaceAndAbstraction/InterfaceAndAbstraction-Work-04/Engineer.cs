@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 using Military.Contracts;
+using Military.ENumerations;
 
 namespace Military
 {
     public class Engineer : SpecialisedSoldier, IEngineer
     {
 
-        ICollection<Repairs> Repairs;
+        public ICollection<IRepair> Repairs { get; }
 
 
-        public Engineer(string id, string firstName, string lastName, decimal salary, string corps, List<Repairs> repairs)
+        public Engineer(int id, string firstName, string lastName, decimal salary, SoldierCorpsEnumerator corps, ICollection<IRepair> repairs)
             : base(id, firstName, lastName, salary, corps)
         {
             this.Repairs = repairs;
         }
 
-        ICollection<Repairs> IEngineer.Repairs => throw new NotImplementedException();
     }
 }

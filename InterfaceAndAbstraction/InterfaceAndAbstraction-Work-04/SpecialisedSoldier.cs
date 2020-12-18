@@ -2,33 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 using Military.Contracts;
+using Military.ENumerations;
 
 namespace Military
 {
-    public abstract class SpecialisedSoldier : Private, ISpecialisedSoldier
+    public class SpecialisedSoldier : Private, ISpecialisedSoldier
     {
-        public string corps;
 
-        public SpecialisedSoldier(string id, string firstName, string lastName, decimal salary, string corps) 
+        public SoldierCorpsEnumerator Corps { get; }
+
+        public SpecialisedSoldier(int id, string firstName, string lastName, decimal salary, SoldierCorpsEnumerator corps) 
             : base(id, firstName, lastName, salary)
         {
             this.Corps = corps;
-        }
-
-        public string Corps
-        {
-            get
-            {
-                return this.corps;
-            }
-            private set
-            {
-                if (value == "Airforces" || value == "Marines")
-                {
-                    throw new ArgumentException();
-                }
-                this.corps = value;
-            }
         }
     }
 }
