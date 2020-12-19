@@ -10,10 +10,15 @@ namespace Military
     {
         public ICollection<IMission> Missions { get; }
 
-        public Commando(int id, string firstName, string lastName, decimal salary, SoldierCorpsEnumerator corps, ICollection<IMission> mission) 
+        public Commando(int id, string firstName, string lastName, decimal salary, string corps) 
             : base(id, firstName, lastName, salary, corps)
         {
-            this.Missions = mission;
+            this.Missions = new List<IMission>();
+        }
+
+        public void AddMission(IMission mission)
+        {
+            this.Missions.Add(mission);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Military.ENumerations
 {
     public enum MissionEnum
     {
-        InProgress = 1,
-        Finished = 2
+        inProgress = 1,
+        Finished = 2,
     }
 }

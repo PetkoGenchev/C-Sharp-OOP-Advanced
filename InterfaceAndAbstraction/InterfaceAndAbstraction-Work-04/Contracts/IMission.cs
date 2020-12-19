@@ -11,6 +11,6 @@ namespace Military.Contracts
 
         MissionEnum MissionEnum { get; }
 
-        void CompleteMission(string name);
+        void CompleteMission();
     }
 }

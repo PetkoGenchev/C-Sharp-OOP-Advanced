@@ -7,8 +7,8 @@ namespace Military
 {
     public class Repair : IRepair
     {
-        public string Name { get; }
-        public int HoursWorked { get; }
+        public string Name { get; private set; }
+        public int HoursWorked { get; private set; }
 
         public Repair(string name, int hours)
         {

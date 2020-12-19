@@ -5,7 +5,7 @@ using Military.ENumerations;
 
 namespace Military.Contracts
 {
-    public interface ISpecialisedSoldier
+    public interface ISpecialisedSoldier : IPrivate
     {
         SoldierCorpsEnumerator Corps { get; }
     }

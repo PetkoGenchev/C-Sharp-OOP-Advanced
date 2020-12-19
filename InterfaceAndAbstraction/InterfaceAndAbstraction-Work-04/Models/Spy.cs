@@ -7,7 +7,7 @@ namespace Military
 {
     public class Spy : Soldier, ISpy
     {
-        public int CodeNumber { get; set; }
+        public int CodeNumber { get; private set; }
 
         public Spy(int id, string firstName, string lastName, int codenumber)
             : base(id, firstName, lastName)

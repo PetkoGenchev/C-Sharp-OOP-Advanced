@@ -7,13 +7,22 @@ namespace Military
 {
     public class LieutenantGeneral : Private, ILieutenantGeneral
     {
-        public ICollection<IPrivate> Privates { get; }
+        private ICollection<IPrivate> privates;
 
-        public LieutenantGeneral(int id, string firstName, string lastName, decimal salary, ICollection<IPrivate> privates) 
+        public LieutenantGeneral(int id, string firstName, string lastName, decimal salary) 
             : base(id, firstName, lastName, salary)
         {
-            this.Privates = privates;
+            this.privates = new List<IPrivate>();
         }
+
+
+        public ICollection<IPrivate> Privates => this.privates;
+
+        public void AddPrivate(IPrivate @private)
+        {
+            this.Privates.Add(@private);
+        }
+
 
         public override string ToString()
         {
@@ -26,5 +35,7 @@ namespace Military
 
             return $"{base.ToString()}";
         }
+
+
     }
 }
