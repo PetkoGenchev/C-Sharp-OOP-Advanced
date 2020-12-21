@@ -15,5 +15,10 @@ namespace Military
             this.Name = name;
             this.HoursWorked = hours;
         }
+
+        public override string ToString()
+        {
+            return $"Part Name: {this.Name} Hours Worked: {this.HoursWorked}";
+        }
     }
 }

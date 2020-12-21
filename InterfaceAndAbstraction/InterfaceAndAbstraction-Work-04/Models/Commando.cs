@@ -20,5 +20,21 @@ namespace Military
         {
             this.Missions.Add(mission);
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb
+                .AppendLine(base.ToString())
+                .AppendLine("Missions: ");
+
+            foreach (var mission in Missions)
+            {
+                sb.AppendLine($"  {mission.ToString()}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
     }
 }

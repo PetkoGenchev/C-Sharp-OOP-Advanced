@@ -22,5 +22,21 @@ namespace Military
         {
             this.Repairs.Add(repair);
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb
+                .AppendLine(base.ToString())
+                .AppendLine("Repairs: ");
+
+            foreach (var repair in Repairs)
+            {
+                sb.AppendLine($"  {repair.ToString()}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
     }
 }

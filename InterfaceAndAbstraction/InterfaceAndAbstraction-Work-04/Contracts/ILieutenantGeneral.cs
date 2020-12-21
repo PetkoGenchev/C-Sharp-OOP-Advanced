@@ -6,8 +6,8 @@ namespace Military.Contracts
 {
     public interface ILieutenantGeneral : IPrivate
     {
-        ICollection<IPrivate> Privates { get; }
+        ICollection<ISoldier> Privates { get; }
 
-        void AddPrivate(IPrivate @private);
+        void AddPrivate(ISoldier @private);
     }
 }

@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Military.Contracts;
+using Military.Core;
+using Military.Core.Contracts;
+using Military.IO;
+using Military.IO.Contracts;
 
 namespace Military
 {
@@ -8,21 +12,13 @@ namespace Military
     {
         static void Main()
         {
-            //ICollection<ISoldier> soldiers = new List<ISoldier>();
-            //ISoldier soldier;
 
+            IReader reader = new ConsoleReader();
+            IWriter writer = new ConsoleWriter();
+            IEngine engine = new Engine(reader,writer);
 
+            engine.Run();
 
-
-            //PrintResult(soldiers);
         }
-
-        //public static void PrintResult(ICollection<ISoldier> soldiers)
-        //{
-        //    foreach (var soldier in soldiers)
-        //    {
-        //        Console.WriteLine(soldier);
-        //    }
-        //}
     }
 }

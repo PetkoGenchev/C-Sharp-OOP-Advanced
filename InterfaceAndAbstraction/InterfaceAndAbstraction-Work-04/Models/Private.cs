@@ -18,7 +18,7 @@ namespace Military
 
         public override string ToString()
         {
-            return $"Name: {base.ToString()} Salary: {Math.Round(this.Salary,2):F2}";
+            return $"Name: {base.ToString()} Salary: {this.Salary:f2}";
         }
     }
 }

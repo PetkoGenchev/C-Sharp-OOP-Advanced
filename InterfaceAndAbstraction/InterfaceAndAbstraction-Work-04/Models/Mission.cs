@@ -39,5 +39,10 @@ namespace Military
             }
             return mission;
         }
+
+        public override string ToString()
+        {
+            return $"Code Name: {this.CodeName} State: {this.MissionEnum.ToString()}";
+        }
     }
 }

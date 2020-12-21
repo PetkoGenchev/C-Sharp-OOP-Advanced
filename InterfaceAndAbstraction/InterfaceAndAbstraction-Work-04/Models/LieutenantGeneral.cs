@@ -7,18 +7,18 @@ namespace Military
 {
     public class LieutenantGeneral : Private, ILieutenantGeneral
     {
-        private ICollection<IPrivate> privates;
+        private ICollection<ISoldier> privates;
 
         public LieutenantGeneral(int id, string firstName, string lastName, decimal salary) 
             : base(id, firstName, lastName, salary)
         {
-            this.privates = new List<IPrivate>();
+            this.privates = new List<ISoldier>();
         }
 
 
-        public ICollection<IPrivate> Privates => this.privates;
+        public ICollection<ISoldier> Privates => this.privates;
 
-        public void AddPrivate(IPrivate @private)
+        public void AddPrivate(ISoldier @private)
         {
             this.Privates.Add(@private);
         }
@@ -28,12 +28,16 @@ namespace Military
         {
             StringBuilder sb = new StringBuilder();
 
-            foreach (var @private in Privates)
-            {
+            sb
+                .AppendLine(base.ToString())
+                .AppendLine("Privates: ");
 
+            foreach (var soldier in this.privates)
+            {
+                sb.AppendLine($"  {soldier.ToString()}");
             }
 
-            return $"{base.ToString()}";
+            return sb.ToString().TrimEnd();
         }
 
 
