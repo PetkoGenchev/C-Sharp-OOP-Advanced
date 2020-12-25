@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphismLab01", "Polymorphism\PolymorphismLab01.csproj", "{83F50798-6A8B-4736-8B03-2D0A8D7B9679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismLab02", "PolymorphismLab02\PolymorphismLab02.csproj", "{E7CD6926-C4EB-4FCD-B959-E1D918BDD7B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphismLab02", "PolymorphismLab02\PolymorphismLab02.csproj", "{E7CD6926-C4EB-4FCD-B959-E1D918BDD7B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismLab03", "PolymorphismLab03\PolymorphismLab03.csproj", "{55496E8F-C410-49CD-85AE-FE57614B6A5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E7CD6926-C4EB-4FCD-B959-E1D918BDD7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7CD6926-C4EB-4FCD-B959-E1D918BDD7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7CD6926-C4EB-4FCD-B959-E1D918BDD7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55496E8F-C410-49CD-85AE-FE57614B6A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55496E8F-C410-49CD-85AE-FE57614B6A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55496E8F-C410-49CD-85AE-FE57614B6A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55496E8F-C410-49CD-85AE-FE57614B6A5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
