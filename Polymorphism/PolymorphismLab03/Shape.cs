@@ -11,7 +11,7 @@ namespace Shapes
 
         public virtual string Draw()
         {
-            return $"Test";
+            return $"Overall Shape";
         }
     }
 }
