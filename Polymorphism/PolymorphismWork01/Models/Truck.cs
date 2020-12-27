@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Vehicles.Contracts;
+using Vehicles.Exceptions;
 
 namespace Vehicles
 {
@@ -19,7 +20,17 @@ namespace Vehicles
 
         public override void Refuel(double fuel)
         {
-            FuelQuantity += (fuel * truckFuelDecrease);
+            if (fuel <= 0)
+            {
+                throw new ArgumentException(NegativeFuelExc.Negative_Fuel_MSG);
+            }
+
+            if (this.FuelQuantity + fuel > this.TankCapacity)
+            {
+                throw new ArgumentException(string.Format(InvalidFuelAmountExc.Invalid_Fuel_Amount_MSG, fuel));
+            }
+
+            this.FuelQuantity += (fuel * truckFuelDecrease);
         }
 
         public override string ToString()

@@ -65,7 +65,7 @@ namespace Vehicles
                 throw new ArgumentException(NegativeFuelExc.Negative_Fuel_MSG);
             }
 
-            if (this.fuelQuantity + fuel > this.TankCapacity)
+            if (this.FuelQuantity + fuel > this.TankCapacity)
             {
                 throw new ArgumentException(string.Format(InvalidFuelAmountExc.Invalid_Fuel_Amount_MSG,fuel));
             }

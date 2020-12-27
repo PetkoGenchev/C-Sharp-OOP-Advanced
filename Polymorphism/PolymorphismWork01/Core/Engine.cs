@@ -18,13 +18,16 @@ namespace Vehicles.Core
         private Engine()
         {
             this.vehicles = new List<IVehicle>();
+
         }
 
         public Engine(IReader reader, IWriter writer)
+            :this()
         {
             this.reader = reader;
             this.writer = writer;
         }
+
 
 
         public void Run()
@@ -104,7 +107,7 @@ namespace Vehicles.Core
                 }
                 else
                 {
-                    bus.DriveFull(amount);
+                    this.writer.WriteLine(bus.DriveEmpty(amount));
                 }
             }
 

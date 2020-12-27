@@ -15,9 +15,27 @@ namespace Vehicles
 
         }
 
-        public string DriveFull(double distance)
+
+        public override string Drive(double distance)
         {
-            double fuelNeeded = distance * (this.FuelConsumption + 1.4);
+            double fuelNeeded = distance * (this.FuelConsumption + Air_Conditionining_Consumption);
+
+            if (this.FuelQuantity >= fuelNeeded)
+            {
+                this.FuelQuantity -= fuelNeeded;
+                return $"{this.GetType().Name} travelled {distance} km";
+            }
+            else
+            {
+                return $"{this.GetType().Name} needs refueling";
+            }
+        }
+
+
+
+        public string DriveEmpty(double distance)
+        {
+            double fuelNeeded = distance * (this.FuelConsumption);
 
             if (this.FuelQuantity >= fuelNeeded)
             {

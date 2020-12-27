@@ -6,7 +6,7 @@ namespace Vehicles.Contracts
 {
     public interface IBus : IVehicle
     {
-        string DriveFull(double distance);
+        string DriveEmpty(double distance);
 
     }
 }
