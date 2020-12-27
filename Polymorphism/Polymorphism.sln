@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphismLab02", "Polymo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphismLab03", "PolymorphismLab03\PolymorphismLab03.csproj", "{55496E8F-C410-49CD-85AE-FE57614B6A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismWork01", "PolymorphismWork01\PolymorphismWork01.csproj", "{A5188FC3-C12D-48D3-A416-3DD5EE84812C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismWork02", "PolymorphismWork02\PolymorphismWork02.csproj", "{128381CD-56C5-491A-B19B-6233CA34B7E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphismWork01", "PolymorphismWork01\PolymorphismWork01.csproj", "{A5188FC3-C12D-48D3-A416-3DD5EE84812C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{A5188FC3-C12D-48D3-A416-3DD5EE84812C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5188FC3-C12D-48D3-A416-3DD5EE84812C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5188FC3-C12D-48D3-A416-3DD5EE84812C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{128381CD-56C5-491A-B19B-6233CA34B7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{128381CD-56C5-491A-B19B-6233CA34B7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{128381CD-56C5-491A-B19B-6233CA34B7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{128381CD-56C5-491A-B19B-6233CA34B7E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

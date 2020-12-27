@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Vehicles.Contracts;
 
 namespace Vehicles
 {
-    public class Car : Vehicle
+    public class Car : Vehicle, ICar
     {
 
         private const double carFuelConsumptionIncrease = 0.9;
