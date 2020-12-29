@@ -6,14 +6,16 @@ namespace Raiding
 {
     public class Paladin : BaseHero
     {
+        private const int paladinPower = 100;
         public Paladin(string name) 
             : base(name)
         {
+            this.Power = paladinPower;
         }
 
         public override string CastAbility()
         {
-            throw new NotImplementedException();
+            return $"{this.GetType().Name} - {this.Name} healed for {this.Power} ";
         }
     }
 }

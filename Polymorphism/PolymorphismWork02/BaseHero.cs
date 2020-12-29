@@ -8,7 +8,7 @@ namespace Raiding
     {
         public string Name { get; set; }
 
-        public int Power;
+        public int Power { get; set; }
 
         public BaseHero(string name)
         {
